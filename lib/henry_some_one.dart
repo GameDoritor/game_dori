@@ -1,7 +1,9 @@
 library henry_some_one;
 
 import 'package:flame/components.dart';
+import 'package:flame/events.dart';
 import 'package:flame/game.dart';
+import 'package:flame/input.dart';
 import 'package:flutter/material.dart';
 
 import 'animated_player.dart';
@@ -23,7 +25,7 @@ class _HenrySomeOneGameState extends State {
   }
 }
 
-class MyStaticGame extends FlameGame with HasCollisionDetection {
+class MyStaticGame extends FlameGame with HasCollisionDetection, PanDetector {
   @override
   Color backgroundColor() => const Color(0x00000000);
   final GameBackGround _backGround = GameBackGround();
